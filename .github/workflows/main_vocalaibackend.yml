@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - VocalAIbackend
+name: Build and deploy Python app to Azure Web App - vocalaibackend
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8AEFCA5B3A9244B49A4FEE348323AC3B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_846C33960D2F4A3DB01E6E137656D74E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9253AA2AC41F4A30BEBF5E4DD4201F92 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_11594D6EC5724F38A4B713D332AE914E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_63F555A5C7D44BECB53F68A4010B9FC3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_699A5F023DAF43578FF843279476ADCD }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'VocalAIbackend'
+          app-name: 'vocalaibackend'
           slot-name: 'Production'
           
