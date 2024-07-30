@@ -614,7 +614,7 @@ def get_audio(result_id):
         # if not file_path:
         #     return jsonify({"error": "Failed to download file"}), 500
         # file_full_path = f'downloads/{result['file_name']}'
-        file_full_path = os.path.join(os.path.join(os.getcwd(), f'downloads/{result['user_id']}'), result['file_name'])
+        file_full_path = os.path.join(os.path.join(os.getcwd(), f"downloads/{result['user_id']}"), result['file_name'])
         if not os.path.exists(file_full_path):
             return jsonify({"error": "File not found"}), 404
         print("full_file_path",file_full_path)
