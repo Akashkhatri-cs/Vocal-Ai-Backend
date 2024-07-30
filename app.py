@@ -71,7 +71,7 @@ UPLOAD_FOLDER = '/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load the pre-trained model
-model = tf.keras.models.load_model(r'D:\AIMT\Sem 3\AML 3406 - AI and ML Capstone Project\bilstm_speech_model_with_overall_score.h5', custom_objects={'MeanSquaredError': tf.keras.losses.MeanSquaredError()})
+model = tf.keras.models.load_model(r'bilstm_speech_model_with_overall_score.h5', custom_objects={'MeanSquaredError': tf.keras.losses.MeanSquaredError()})
 model.compile(optimizer='adam', loss='mse')
 
 ffmpeg_path = r'D:\AIMT\Sem 3\AML 3406 - AI and ML Capstone Project\ffmpeg-2024-06-21-git-d45e20c37b-full_build\bin'  # Change this to the actual path of your ffmpeg bin directory
